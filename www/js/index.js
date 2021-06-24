@@ -19,7 +19,16 @@ function MealCarbCounter() {
 
     function bakeryList() {
         console.log("clicked");
+       var buttonsContainer = document.getElementsByClassName("ItemsList");
+       var itemName = "";
+        var showItem = document.createElement("button");
+        showItem.innerText = ""
+
         window.location.href = "foodList.html";
+
+        //TODO Add code to get the information from the database 
+
+        
     }
 
 
