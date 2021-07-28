@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover"/>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/foodList.css" />
+    <script src="https://kit.fontawesome.com/138236fd8a.js" crossorigin="anonymous"></script>
+    <title>MealCarbCounter</title>
+</head>
+   <body onload="controller.foodNutrition()">
+    <div id = "btnContainer">
+        <button id="backButton" onclick="controller.back()">Back</button>
+        <button id="addToMeal" onclick="controller.addToMeal()">Add To Meal</button>
+        </div>
+<div class="card">
+    <img src="/www/img/emote3.png" alt="An emoticon with thumbs up" id="emote">
+    <hr>
+    <div class="container">
+    <h1 id="foodtitle"></h1>
+    <h2 id="foodWeight">Weight = <span id="weight"></span></h2>
+    <button id="totalCarbs" onclick="controller.totalCarbs()">Total Carbs</button>
+    <h2 id="totalCarbVal">Total Carbs = <span id="total"></span></h2>
+</div>
+</div>
+<div>
+    <button id="goToMeal" onclick="controller.mealPage()">Go To Meal</button>
+</div>
+   
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type= "text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

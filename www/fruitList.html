@@ -12,16 +12,16 @@
     <title>MealCarbCounter</title>
 </head>
 
-<body>
-    <!--Display buttons with items received from database-->
-    <section class="ItemsList">
-        
-    </section>
+<body onload="controller.fruitItems()">
+    <!--Display list with items received from database-->
+    <div id = "btnContainer">
+    <button id="backButton" onclick="controller.back()">Back</button>
+    </div>
  
 
    
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type= "text/javascript" src="js/index.js"></script>
 </body>
 
 </html>

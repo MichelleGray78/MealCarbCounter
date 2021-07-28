@@ -13,30 +13,33 @@
 </head>
 
 <body>
+    <!--Food Search - TODO - Implement-->
     <div class="search">
         <form action="#" id="search">
             <input type="text" name="query" placeholder="Food Search">
             <button id="searchbtn"><i class="fas fa-search"></i> Search</button>
         </form>
     </div>
+    <!--Diary button TODO - implement properly-->
     <section class="diary">
-        <button id="diary">Diary <i class="fas fa-book"></i></button>
+        <button id="diary" onclick="controller.diary()">Diary <i class="fas fa-book"></i></button>
     </section>
+    <!--Food category buttons-->
     <section class="foods">
         <button id="bakery" onclick="controller.bakeryList()">Bakery</button>
-        <button id="biscuits">Biscuits</button>
-        <button id="breakfast">Breakfast</button>
-        <button id="drinks">Drinks</button>
-        <button id="fruit">Fruit</button>
-        <button id="meat">Meat and Fish</button>
-        <button id="pasta">Pasta</button>
-        <button id="potatoes">Potatoes</button>
-        <button id="rice">Rice and Grains</button>
-        <button id="soup">Soups</button>
-        <button id="sauce">Sauces and Spreads</button>
-        <button id="veg">Veg and pulses</button>
-        <button id="snacks">Snacks and Sweets</button>
-        <button id="desserts">Desserts</button>
+        <button id="biscuits" onclick="controller.biscuitList()">Biscuits</button>
+        <button id="breakfast" onclick="controller.breakfastList()">Breakfast</button>
+        <button id="drinks" onclick="controller.drinkList()">Drinks</button>
+        <button id="fruit" onclick="controller.fruitList()">Fruit</button>
+        <button id="meat" onclick="controller.meatList()">Meat and Fish</button>
+        <button id="pasta" onclick="controller.pastaList()">Pasta</button>
+        <button id="potatoes" onclick="controller.potatoList()">Potatoes</button>
+        <button id="rice" onclick="controller.riceList()">Rice and Grains</button>
+        <button id="soup" onclick="controller.soupList()">Soups</button>
+        <button id="sauce" onclick="controller.sauceList()">Sauces and Spreads</button>
+        <button id="veg" onclick="controller.vegList()">Veg and Pulses</button>
+        <button id="snacks" onclick="controller.snackList()">Snacks and Sweets</button>
+        <button id="desserts" onclick="controller.dessertList()">Desserts</button>
     </section>
 
    
