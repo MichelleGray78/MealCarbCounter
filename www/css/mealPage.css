@@ -55,16 +55,6 @@ body {
     font-size: 16px;
 }
 
-#diaryBtn {
-    margin-bottom: 2em;
-    width: 100%;
-    padding: 7px 32px;
-    background-image: linear-gradient(to right, #b621fe, #1fd1f9);
-    display: inline-block;
-    color: white;
-    font-size: 16px;
-}
-
 #emote {
     margin-left: auto;
     margin-right: auto;

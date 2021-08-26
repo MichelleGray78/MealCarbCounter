@@ -18,9 +18,37 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <icon src="\www\img\icon.png" density="ldpi" />
+        <!--FIX LANDSCAPE ISSUES-->
+        <splash src="res\screen\android\mccsplashlandhdpi.png" density="land-hdpi" />
+        <splash src="res\screen\android\mccsplashlandldpi.png" density="land-ldpi" />
+        <splash src="res\screen\android\mccsplashlandmdpi.png" density="land-mdpi" />
+        <splash src="res\screen\android\mccsplashlandxhdpi.png" density="land-xhdpi" />
+        <splash src="res\screen\android\mccsplashlandxxhdpi.png" density="land-xxhdpi" />
+        <splash src="res\screen\android\mccsplashlandxxxhdpi.png" density="land-xxxhdpi" />
+        <!--Portrait images are fine-->
+        <splash src="res\screen\android\mccsplashhdpi.png" density="port-hdpi" />
+        <splash src="res\screen\android\mccsplashldpi.png" density="port-ldpi" />
+        <splash src="res\screen\android\mccsplashmdpi.png" density="port-mdpi" />
+        <splash src="res\screen\android\mccsplashxhdpi.png" density="port-xhdpi" />
+        <splash src="res\screen\android\mccsplashxxhdpi.png" density="port-xxhdpi" />
+        <splash src="res\screen\android\mccsplashxxxhdpi.png" density="port-xxxhdpi" /> 
+        <preference name="SplashScreenDelay" value="8000" />
+        <preference name="SplashShowOnlyFirstTime" value="false" />
     </platform>
+
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+
+<platform name="browser">
+    <preference name="SplashScreen" value="/images/browser/splashscreen.jpg" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="3000" /> 
+    <preference name="SplashScreenBackgroundColor" value="green" />
+    <preference name="ShowSplashScreen" value="false" /> 
+    <preference name="SplashScreenWidth" value="600" /> 
+    <preference name="SplashScreenHeight" value="300" /> 
+</platform>
+    
 </widget>
