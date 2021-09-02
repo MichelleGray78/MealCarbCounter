@@ -18,31 +18,33 @@ body {
   width: 100%;
 }
 
-.search {
-  width: 100%;
+.diarySection {
+  margin-top: 15%;
+  text-align: center;
+}
+.homeBtnCont {
   text-align: center;
   margin-top: 15%;
 }
 
-.search input {
-  height: 25px;
-  width: 200px;
-}
-
-.diary {
-  text-align: center;
-  margin-top: 15px;
-}
-
-#diary {
+#diaryBtn, #homeBtn {
   width: 50%;
   padding: 7px 32px;
   background-image: linear-gradient(to right, #b621fe, #1fd1f9);
-  display: inline-block;
   color: white;
   font-size: 16px;
   margin-bottom: 1.5em;
+  display:inline-block;
 }
+ #backButton {
+   width: 50%;
+   padding: 7px 32px;
+   background-image: linear-gradient(to right, #b621fe, #1fd1f9);
+   color: white;
+   font-size: 16px;
+   margin-bottom: 1.5em;
+   float: right;
+ }
 
 #searchbtn {
   background-color: #4caf50;
@@ -54,15 +56,7 @@ body {
   font-size: 16px;
 }
 
-.foodCat {
-  width: 100%;
-  font-size: 16px;
-  padding: 15px 32px;
-  background-color: #9575cd;
-  color: white;
-}
-
-.foodListBtn {
+.foodCat, .foodListBtn {
   width: 100%;
   font-size: 16px;
   padding: 15px 32px;
@@ -87,7 +81,6 @@ body {
   margin-left: 1.5em;
   margin-right: 1.5em;
 }
-
 #totalCarbs {
   background-color: yellow;
   width: 100%;
@@ -105,24 +98,23 @@ h2 {
 h1 {
   text-align: center;
 }
-
-#backButton,
-#addToMeal, #addToDiary {
+#addToDiary {
   width: 50%;
   margin-bottom: 0.5em;
   padding: 7px 32px;
   background-image: linear-gradient(to right, #b621fe, #1fd1f9);
-  /* float: right; */
   color: white;
   font-size: 16px;
 }
-#goToMeal {
+#goToMeal, #addToMeal {
   width: 100%;
   font-size: 16px;
-  padding: 15px 32px;
+  padding: 7px 32px;
   background-image: linear-gradient(to right, #b621fe, #1fd1f9);
   color: white;
+  margin-bottom: 0.5em;
 }
+/*Table Styles*/
 table {
   border-collapse: collapse;
   margin-top: 0.5em;
@@ -132,20 +124,21 @@ table {
   width: 100%;
 }
 
-table thead tr, tfoot tr {
-  background-color: #CF9FFF;
+table thead tr,
+tfoot tr {
+  background-color: #cf9fff;
   color: black;
   text-align: left;
 }
 
 table th,
 table td {
-    padding: 10px 10px;
+  padding: 10px 10px;
 }
 
 table tbody tr {
   border-bottom: 1px solid #dddddd;
-  background-color: #89CFF0;
+  background-color: #89cff0;
 }
 
 table tbody tr:last-of-type {
@@ -153,14 +146,84 @@ table tbody tr:last-of-type {
 }
 
 #totalMealCarbs {
-  background-color:	#9400D3;
+  background-color: #9400d3;
   color: white;
 }
 
-h3 {
-  background-color: #89CFF0;
-    padding-bottom: 10%;
-    padding-top: 10%;
-    text-align: center;
+#totalContainer {
+  background-image: linear-gradient(to right, #b621fe, #1fd1f9);
+  border-bottom: black solid;
+  border-top: black solid;
+}
 
+#diaryAdditionHeading {
+  padding-top: 1em;
+}
+#carbTotalDisplay, #diaryAdditionMealName, #selectMealName {
+  background-color: #89cff0;
+  padding-top: 2em;
+}
+
+h3 {
+  padding-bottom: 10%;
+  padding-top: 10%;
+  text-align: center;
+}
+
+#noMealListCont {
+  background-image: linear-gradient(to right, #b621fe, #1fd1f9);
+}
+
+#mealListEmptyHeading {
+  padding-bottom: 10%;
+  padding-top: 10%;
+  text-align: center;
+  color: white;
+  border-bottom: black solid;
+}
+#mealListEmptyHeading2 {
+  background-color: #89cff0;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  text-align: center;
+  color: white;
+  font-size: medium;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+#mealBtnCont {
+  background-color: #89cff0;
+  padding-bottom: 2em;
+  border-top: black solid;
+  text-align: center;
+}
+#breakfastBtn, #lunchBtn, #dinnerBtn, #teaBtn, #snackBtn, #gamerSnackBtn {
+  width: 75%;
+  padding: 7px 32px;
+  background-image: linear-gradient(to right, #b621fe, #1fd1f9);
+  color: white;
+  font-size: 16px;
+  margin-bottom: 0.5em;
+}
+
+#cupcake {
+  width: 50%;
+  padding-top: 2em;
+}
+#boom {
+  width: 70%;
+}
+#diaryContainer {
+  background-image: linear-gradient(to right, #b621fe, #1fd1f9);
+  border-bottom: black solid;
+}
+.diaryTitles {
+  background-color: #89cff0;
+  border-bottom: black solid;
+  border-top: black solid;
+}
+p {
+  background-color: #89cff0;
+  font-size: medium;
+  padding-left: 0.5em;
 }

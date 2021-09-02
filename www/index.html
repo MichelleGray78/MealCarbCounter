@@ -10,18 +10,9 @@
     <title>MealCarbCounter</title>
   </head>
  <body>
-    <!--Food Search - TODO - Implement-->
-    <div class="search">
-        <form action="#" id="search">
-            <input type="text" name="query" placeholder="Food Search">
-            <button id="searchbtn"><i class="fas fa-search"></i> Search</button>
-        </form>
-    </div>
-    <!--Diary button TODO - implement properly-->
-    <section class="diary">
-        <button id="diary" onclick="controller.diary()">Diary <i class="fas fa-book"></i></button>
+    <section class="diarySection" id="diarySection">
+        <button id="diaryBtn" onclick="controller.diary()">Diary</button>
     </section>
-    <!--Food category buttons-->
     <div id ="btnContainer">
         <button class="foodCat" id="bakery" value="Bakery" onclick="controller.foodList(this.value)">Bakery</button>
         <button class="foodCat" id="biscuits" value="Biscuits" onclick="controller.foodList(this.value)">Biscuits</button>
@@ -38,9 +29,8 @@
         <button class="foodCat" id="snacks" value="Snacks" onclick="controller.foodList(this.value)">Snacks and Sweets</button>
         <button class="foodCat" id="desserts" value="Desserts" onclick="controller.foodList(this.value)">Desserts</button>
     </div>
-
-   
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    
 </body>
 </html>
