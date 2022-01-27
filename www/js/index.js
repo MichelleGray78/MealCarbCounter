@@ -14,9 +14,9 @@ function onDeviceReady() {
 
 function MealCarbCounter() {
   //Dev testing
-  // let BASE_GET_URL = "http://localhost:8080/api/v1/foods?foodCategory=";
+  let BASE_GET_URL = "http://localhost:8080/api/v1/foods?foodCategory=";
   //Live testing - on phone
-  let BASE_GET_URL = "https://mealcarbcounter.com/api/v1/foods?foodCategory=";
+  // let BASE_GET_URL = "https://mealcarbcounter.com/api/v1/foods?foodCategory=";
 
   //Getting the foods from the API and saving the information to an array
   const foodArray = []; //Array includes foodName, carbs, weight, weightUnit
@@ -408,6 +408,7 @@ function MealCarbCounter() {
 
   //Function to create the display of buttons in order to add meals to the diary
   function addToDiary() {
+    $("#addToDiary").remove();
     //Getting the local Storage items
     const diaryArray = JSON.parse(storage.getItem("mealList"));
     if (diaryArray.length == 0) {
@@ -594,6 +595,7 @@ function MealCarbCounter() {
     //Getting the data for the diary view
     let diaryArray = JSON.parse(storage.getItem("diary"));
     console.log(diaryArray);
+    try {
     for (let i = 0; i < diaryArray.length; i++) {
       let date = diaryArray[i][0]["date"];
       let diaryMeal = diaryArray[i][0]["diaryMeal"];
@@ -625,8 +627,16 @@ function MealCarbCounter() {
           "\n Carbs: " +
           totalCarbs;
       }
+      }
+    } catch (e) {
+      alert(
+        "No items have been added to the diary yet, please press home and add some foods! " +
+          "(" +
+          e.message +
+          ")"
+      );
     }
-  }
+  };
 
   //Public functions
 
@@ -637,8 +647,15 @@ function MealCarbCounter() {
   };
   //To add items to the diary
   this.addToDiary = function () {
-    $("#addToDiary").remove();
+    /*Added if statement to check that the total carbs for the meal has 
+    been worked out before adding the item to the diary*/
+    let totalCarbsForThisMeal = document.getElementById("carbTotalDisplay")
+    if (!totalCarbsForThisMeal){
+      alert("Please click 'Total carbs for this meal' button then 'Add To Diary'");
+    }
+    else {
     addToDiary();
+    }
   };
   //To go to the diary additions view
   this.diaryAdditions = function (value) {
